@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User Profile - Techplement</title>
+  <link rel="stylesheet" href="/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header>
+    <div class="container nav-container">
+      <div class="logo">
+        <a href="/index.html">
+          <img src="/logo.png" alt="Techplement Logo" class="logo-img">
+        </a>
+      </div>
+      <nav class="main-nav">
+        <ul class="nav-links">
+          <li><a href="/index.html">Home</a></li>
+          <li class="dropdown-wrapper">
+            <a href="#">Categories ▾</a>
+            <ul class="dropdown-content">
+              <li><a href="/web-dev.html">Web Development</a></li>
+              <li><a href="/data-science.html">Data Science</a></li>
+              <li><a href="/ai-ml.html">AI & ML</a></li>
+              <li><a href="/uiux.html">UI/UX Design</a></li>
+              <li><a href="/cyber-security.html">Cyber Security</a></li>
+              <li><a href="/cloud-computing.html">Cloud Computing</a></li>
+            </ul>
+          </li>
+        </ul>
+        <div class="nav-right">
+          <div class="search-wrapper">
+            <input type="text" placeholder="Search courses..." class="search-input">
+            <i class="fas fa-search search-icon"></i>
+          </div>
+          <i class="fas fa-shopping-cart cart-icon"></i>
+          <a href="/profile.html" class="btn nav-btn">My Profile</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <div class="hero-box">
+        <h1>Welcome, User One</h1>
+        <p>Email: user1@gmail.com</p>
+        <p>Enrolled in the following courses:</p>
+        <ul class="enrolled-courses">
+          <li>Machine Learning A-Z</li>
+          <li>Python for Data Science</li>
+          <li>UI/UX Design Basics</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="courses-section">
+    <div class="container">
+      <h2 class="section-title">Your Courses</h2>
+      <div class="course-list">
+        <div class="course-card">
+          <img src="https://cdn.pixabay.com/photo/2020/07/01/12/58/technology-5350870_1280.jpg" alt="ML">
+          <h3>Machine Learning A-Z</h3>
+          <p>Master machine learning algorithms from scratch.</p>
+          <strong>Purchased</strong>
+        </div>
+        <div class="course-card">
+          <img src="https://cdn.pixabay.com/photo/2020/12/14/14/31/code-5825694_1280.jpg" alt="Python">
+          <h3>Python for Data Science</h3>
+          <p>Hands-on projects using Pandas and Numpy.</p>
+          <strong>Purchased</strong>
+        </div>
+        <div class="course-card">
+          <img src="/ui.jpg" alt="UI UX">
+          <h3>UI/UX Design Basics</h3>
+          <p>Design principles and user experience fundamentals.</p>
+          <strong>Purchased</strong>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Techplement. Designed with ❤️ by the Techplement Intern.</p>
+  </footer>
+
+  <script src="/script.js"></script>
+</body>
+</html>

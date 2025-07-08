@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Techplement - Cloud Computing</title>
+  <link rel="stylesheet" href="/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container nav-container">
+      <div class="logo">
+        <a href="/index.html">
+          <img src="/logo.png" alt="Techplement Logo" class="logo-img">
+        </a>
+      </div>
+      <nav class="main-nav">
+        <ul class="nav-links">
+          <li><a href="/index.html">Home</a></li>
+          <li class="dropdown-wrapper">
+            <a href="#">Categories ▾</a>
+            <ul class="dropdown-content">
+              <li><a href="web-dev.html">Web Development</a></li>
+              <li><a href="data-science.html">Data Science</a></li>
+              <li><a href="ai-ml.html">AI & ML</a></li>
+              <li><a href="uiux.html">UI/UX Design</a></li>
+              <li><a href="cyber-security.html">Cyber Security</a></li>
+              <li><a href="cloud-computing.html">Cloud Computing</a></li>
+            </ul>
+          </li>
+        </ul>
+        <div class="nav-right">
+          <div class="search-wrapper">
+            <input type="text" class="search-input" placeholder="Search courses..." />
+            <i class="fas fa-search search-icon"></i>
+          </div>
+          <i class="fas fa-shopping-cart cart-icon"></i>
+          <button class="btn nav-btn" onclick="openModal('login')">Sign In</button>
+          <button class="btn nav-btn" onclick="openModal('register')">Register</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <div class="hero-box">
+        <h1>Cloud Computing Courses</h1>
+        <p>Learn AWS, Azure, and modern cloud architecture.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Courses Section -->
+  <section class="courses-section">
+    <div class="container">
+      <h2 class="section-title">Cloud Computing</h2>
+      <div class="course-list">
+        <div class="course-card">
+          <img src="https://img-c.udemycdn.com/course/240x135/2645564_b2f1_3.jpg" alt="AWS">
+          <h3>AWS Cloud Practitioner</h3>
+          <p>Get started with AWS and cloud services.</p>
+          <strong>₹2,599</strong>
+        </div>
+        <div class="course-card">
+          <img src="https://img-c.udemycdn.com/course/240x135/2587984_91c4_5.jpg" alt="Azure">
+          <h3>Microsoft Azure Fundamentals</h3>
+          <p>Learn basics of Azure cloud platform and architecture.</p>
+          <strong>₹2,999</strong>
+        </div>
+        <div class="course-card">
+          <img src="https://img-c.udemycdn.com/course/240x135/1866676_620b_3.jpg" alt="GCP">
+          <h3>Google Cloud Associate</h3>
+          <p>Get hands-on experience with Google Cloud Platform.</p>
+          <strong>₹3,199</strong>
+        </div>
+        <div class="course-card">
+          <img src="https://img-c.udemycdn.com/course/240x135/2513460_8bcd_2.jpg" alt="Kubernetes">
+          <h3>Kubernetes for Beginners</h3>
+          <p>Deploy and scale applications in the cloud with Kubernetes.</p>
+          <strong>₹2,899</strong>
+        </div>
+        <div class="course-card">
+          <img src="https://img-c.udemycdn.com/course/240x135/2146488_840a_2.jpg" alt="Docker">
+          <h3>Docker Mastery</h3>
+          <p>Containerize apps and services for cloud deployment.</p>
+          <strong>₹2,699</strong>
+        </div>
+        <div class="course-card">
+          <img src="https://img-c.udemycdn.com/course/240x135/1906852_93c6_3.jpg" alt="DevOps">
+          <h3>DevOps on AWS</h3>
+          <p>Combine cloud, CI/CD pipelines, and automation using AWS DevOps tools.</p>
+          <strong>₹3,299</strong>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Techplement. Designed with ❤️ by the Techplement Intern.</p>
+  </footer>
+
+  <!-- Login/Register Modal -->
+  <div class="modal-overlay" id="authModal">
+    <div class="auth-modal">
+      <span class="close-modal" onclick="closeModal()">&times;</span>
+      <div class="auth-tabs">
+        <button onclick="showForm('login')" id="loginTab" class="active">Login</button>
+        <button onclick="showForm('register')" id="registerTab">Register</button>
+      </div>
+      <form id="loginForm" class="auth-form">
+        <div class="message" id="loginMsg"></div>
+        <input type="email" placeholder="Email" required />
+        <input type="password" id="loginPassword" placeholder="Password" required />
+        <label class="checkbox-label">
+          <input type="checkbox" onclick="togglePassword('loginPassword')"> Show Password
+        </label>
+        <button type="submit" class="btn">Login</button>
+      </form>
+
+      <form id="registerForm" class="auth-form hidden">
+        <div class="message" id="registerMsg"></div>
+        <input type="text" placeholder="Full Name" required />
+        <input type="email" placeholder="Email" required />
+        <input type="password" id="registerPassword" placeholder="Password" required />
+        <label class="checkbox-label">
+          <input type="checkbox" onclick="togglePassword('registerPassword')"> Show Password
+        </label>
+        <button type="submit" class="btn">Register</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="/script.js"></script>
+</body>
+</html>

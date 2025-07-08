@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Techplement - Cyber Security</title>
+  <link rel="stylesheet" href="/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container nav-container">
+      <div class="logo">
+        <a href="/index.html">
+          <img src="/logo.png" alt="Techplement Logo" class="logo-img">
+        </a>
+      </div>
+
+      <nav class="main-nav">
+        <ul class="nav-links">
+          <li><a href="/index.html">Home</a></li>
+          <li class="dropdown-wrapper">
+            <a href="#">Categories ▾</a>
+            <ul class="dropdown-content">
+              <li><a href="web-dev.html">Web Development</a></li>
+              <li><a href="data-science.html">Data Science</a></li>
+              <li><a href="ai-ml.html">AI & ML</a></li>
+              <li><a href="uiux.html">UI/UX Design</a></li>
+              <li><a href="cyber-security.html">Cyber Security</a></li>
+              <li><a href="cloud-computing.html">Cloud Computing</a></li>
+            </ul>
+          </li>
+        </ul>
+        <div class="nav-right">
+          <div class="search-wrapper">
+            <input type="text" placeholder="Search courses..." class="search-input" />
+            <i class="fas fa-search search-icon"></i>
+          </div>
+          <i class="fas fa-shopping-cart cart-icon"></i>
+          <button class="btn nav-btn" onclick="openModal('login')">Sign In</button>
+          <button class="btn nav-btn" onclick="openModal('register')">Register</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <div class="hero-box">
+        <h1>Cyber Security Courses</h1>
+        <p>Protect your data, networks, and systems from cyber threats.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Courses -->
+  <section class="courses-section">
+    <div class="container">
+      <h2 class="section-title">Cyber Security</h2>
+      <div class="course-list">
+        <div class="course-card">
+          <img src="cyber.jpg" alt="Cyber Security Essentials">
+          <h3>Cyber Security Essentials</h3>
+          <p>Protect yourself and your systems from threats.</p>
+          <strong>₹2,299</strong>
+        </div>
+        <div class="course-card">
+          <img src="https://img-c.udemycdn.com/course/240x135/1913052_68d0_3.jpg" alt="Ethical Hacking">
+          <h3>Ethical Hacking for Beginners</h3>
+          <p>Learn to test and secure systems like a pro hacker.</p>
+          <strong>₹2,799</strong>
+        </div>
+        <div class="course-card">
+          <img src="https://img-c.udemycdn.com/course/240x135/1565838_e54e_16.jpg" alt="Network Security">
+          <h3>Network Security Mastery</h3>
+          <p>Secure wired and wireless networks from vulnerabilities.</p>
+          <strong>₹3,199</strong>
+        </div>
+        <div class="course-card">
+          <img src="https://img-c.udemycdn.com/course/240x135/1515446_9c6d_10.jpg" alt="Linux Security">
+          <h3>Linux for Cyber Security</h3>
+          <p>Use Linux and terminal tools in ethical hacking.</p>
+          <strong>₹1,999</strong>
+        </div>
+        <div class="course-card">
+          <img src="https://img-c.udemycdn.com/course/240x135/1249688_5d13_6.jpg" alt="Cryptography">
+          <h3>Cryptography Basics</h3>
+          <p>Learn encryption, decryption, and secure communication.</p>
+          <strong>₹2,499</strong>
+        </div>
+        <div class="course-card">
+          <img src="https://img-c.udemycdn.com/course/240x135/614772_233b_9.jpg" alt="SOC Analyst">
+          <h3>SOC Analyst Fundamentals</h3>
+          <p>Become a Security Operations Center analyst.</p>
+          <strong>₹2,799</strong>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Techplement. Designed with ❤️ by the Techplement Intern.</p>
+  </footer>
+
+  <!-- Login/Register Modal -->
+  <div class="modal-overlay" id="authModal">
+    <div class="auth-modal">
+      <span class="close-modal" onclick="closeModal()">&times;</span>
+      <div class="auth-tabs">
+        <button onclick="showForm('login')" id="loginTab" class="active">Login</button>
+        <button onclick="showForm('register')" id="registerTab">Register</button>
+      </div>
+
+      <!-- Login Form -->
+      <form id="loginForm" class="auth-form">
+        <div class="message" id="loginMsg"></div>
+        <input type="email" placeholder="Email" required />
+        <input type="password" id="loginPassword" placeholder="Password" required />
+        <label class="checkbox-label">
+          <input type="checkbox" onclick="togglePassword('loginPassword')"> Show Password
+        </label>
+        <button type="submit" class="btn">Login</button>
+      </form>
+
+      <!-- Register Form -->
+      <form id="registerForm" class="auth-form hidden">
+        <div class="message" id="registerMsg"></div>
+        <input type="text" placeholder="Full Name" required />
+        <input type="email" placeholder="Email" required />
+        <input type="password" id="registerPassword" placeholder="Password" required />
+        <label class="checkbox-label">
+          <input type="checkbox" onclick="togglePassword('registerPassword')"> Show Password
+        </label>
+        <button type="submit" class="btn">Register</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="/script.js"></script>
+</body>
+</html>
