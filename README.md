@@ -1,42 +1,37 @@
-🌐 Techplement - Learn Anytime, Anywhere
+# Techplement
 
-Techplement is an interactive e-learning platform that helps learners develop industry-relevant skills in web development, data science, AI/ML, cybersecurity, UI/UX design, and cloud computing. The platform is responsive, user-friendly, and comes with essential features such as login/register modals, dynamic course rendering, and a personalized user profile.
+A responsive e-learning website built with plain HTML, CSS, and JavaScript. No build step or package installation is required.
 
----
+## Pages
 
-Features
+- `index.html` — home, learning categories, searchable course catalog, about, and contact form
+- `web-dev.html`, `data-science.html`, `ai-ml.html`, `uiux.html`, `cyber-security.html`, `cloud-computing.html` — searchable topic catalogs
+- `signup.html` and `login.html` — account creation and sign-in demo
+- `profile.html` — learner profile and enrolled courses
 
--  Browse curated online courses across multiple tech domains
--  Login/Register modal with localStorage user auth
--  Personalized user profile with purchased course listings
--  Hero sections with background overlays and blur boxes
--  Fully responsive and mobile-friendly
--  Intuitive navigation bar with dropdown categories
--  Course search input
--  Clean UI with modern design and subtle animations
+## Run locally
 
----
+Open `index.html` in a browser, or serve this folder with any static file server. For example:
 
-Pages Included
+```sh
+python -m http.server 8000
+```
 
-| Page Name           | Description                                 |
-|---------------------|---------------------------------------------|
-| `index.html`        | Home page with featured courses and hero    |
-| `profile.html`      | User profile with enrolled course display   |
-| `web-dev.html`      | Web development course catalog              |
-| `data-science.html` | Data science course catalog                 |
-| `ai-ml.html`        | AI & ML course catalog                      |
-| `cloud-computing.html` | Cloud computing course catalog           |
-| `cyber-security.html`  | Cybersecurity course catalog             |
-| `uiux.html`         | UI/UX design course catalog                 |
+Then visit `http://localhost:8000`.
 
----
+## Publish with GitHub Pages
 
-Tech Stack
+1. Push the contents of this folder to the repository's default branch.
+2. In GitHub, open **Settings → Pages**.
+3. Choose **Deploy from a branch**, select the default branch and the repository root (`/`), then save.
+4. Wait for the Pages deployment and open the URL GitHub provides.
 
-- Frontend: HTML5, CSS3, JavaScript (Vanilla)
-- Styling: Google Fonts (Poppins), Font Awesome Icons
-- Animations: AOS (Animate on Scroll)
-- Data Storage: `localStorage` for user authentication and session persistence
+All site links and bundled assets use relative paths, so the site works from a GitHub Pages project subpath as well as a custom domain.
 
----
+## Demo account behavior
+
+Account creation, sign-in, and course enrollments are browser-only demonstrations using `localStorage`; they are not connected to a server and do not sync across browsers or devices. Passwords are hashed in the browser, but this is not a substitute for server-side authentication. Do not use real or reused passwords. The contact form is also a front-end demonstration and needs an email service or backend to deliver messages.
+
+## Credits
+
+Created by Saurabh Patill.
